@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 /**
  * Problem Statement
- * Given two fractions passed in as int arrays,
- * returns the fraction which is result of adding the two input fractions
- * Fraction is represented as a two-element array - [ numerator, denominator ]
- * The returned fraction has to be in its simplest form.
+ *  Given two fractions passed in as int arrays,
+ *  returns the fraction which is result of adding the two input fractions
+ *  Fraction is represented as a two-element array - [ numerator, denominator ]
+ *  The returned fraction has to be in its simplest form.
  * Signature:
  *  int[] addFractions ( int[] fraction1, int[] fraction2 ){}
  * Test Cases:
