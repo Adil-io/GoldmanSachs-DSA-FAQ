@@ -32,13 +32,12 @@ public class LongestSameLetterSubstring {
             hm.put(rightChar, hm.getOrDefault(rightChar, 0) + 1);
             maxCount = Math.max(maxCount, hm.get(rightChar));
 
-            int windowSize = right - left + 1;
-            if (windowSize - maxCount > k) {
+            if ((right - left + 1) - maxCount > k) {
                 char leftChar = str.charAt(left);
                 hm.put(leftChar, hm.get(leftChar) - 1);
                 left++;
             }
-            maxLength = Math.max(maxLength, windowSize);
+            maxLength = Math.max(maxLength, (right - left + 1));
         }
         return maxLength;
     }
