@@ -20,6 +20,7 @@ public class SmallestNumber {
     public static void main(String[] args) {
         int[] a = new int[]{3, 4, 5, 6, 1, 2};
         System.out.println(findMin(a));
+        System.out.println(findMinInArray(a));
     }
 
     private static int findMin(int[] a) {
@@ -30,6 +31,19 @@ public class SmallestNumber {
             }
         }
         return min;
+    }
+
+    private static int findMinInArray(int[] a) {
+        int left = 0, right = a.length - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (a[mid] > a[right]) {
+                left = mid + 1;
+            } else {
+                right = mid;
+            }
+        }
+        return a[left];
     }
 
 }

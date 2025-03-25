@@ -31,7 +31,9 @@ public class SecondSmallest {
         if (x.length < 2) {
             return 0;
         }
-        int min = Integer.MAX_VALUE, secondMin = Integer.MAX_VALUE;
+
+        int secondMin = Integer.MAX_VALUE;
+        int min = Integer.MAX_VALUE;
         for (int num : x) {
             if (num < min) {
                 secondMin = min;
